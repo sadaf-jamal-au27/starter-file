@@ -7,10 +7,11 @@ logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-db.md
-user-stories.md
-db_design.md
-api_documentation.md
+#md files
+db.md*
+user-stories.md*
+db_design.md*
+api_documentation.md*
 docs/
 
 # Environment files
