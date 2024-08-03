@@ -1,0 +1,36 @@
++----------------+      +----------------+      +----------------+
+|     User       |      |      Bus        |      |     Route      |
++----------------+      +----------------+      +----------------+
+| id             |      | id             |      | id             |
+| name           |      | number         |      | startPoint     |
+| email          |      | make           |      | endPoint       |
+| password       |      | model          |      | distance       |
+| role           |      | capacity       |      +----------------+
++----------------+      +----------------+                |
+        |                         |                      |
+        |                         |                      |
+        |                         |                      |
+        |                         |                      |
+        v                         v                      v
++----------------+      +----------------+      +----------------+
+|   Schedule     |      |    Booking     |      |   Payment      |
++----------------+      +----------------+      +----------------+
+| id             |      | id             |      | id             |
+| departureTime  |      | seatNumber     |      | amount         |
+| arrivalTime    |      | userId (FK)    |      | paymentDate    |
+| busId (FK)     |      | scheduleId (FK)|      | bookingId (FK) |
+| routeId (FK)   |      +----------------+      | status         |
++----------------+                             +----------------+
+        |
+        |
+        |
+        v
+   +----------------+
+   |   Bus Route    |
+   +----------------+
+   | id             |
+   | departureTime  |
+   | arrivalTime    |
+   | busId (FK)     |
+   | routeId (FK)   |
+   +----------------+

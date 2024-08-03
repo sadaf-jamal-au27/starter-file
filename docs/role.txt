@@ -1,0 +1,55 @@
++----------------+            +----------------+           +----------------+           +----------------+
+|   Client       |            |    API Layer   |           |    Service     |           |   Database     |
++----------------+            +----------------+           +----------------+           +----------------+
+|                |            |                |           |                |           |                |
+|  GET /users    |            |  UserController|           |  UserService   |           |   User DB      |
+|  POST /users   |  ------>   |  Middleware    |  ------>  |  Validate      |  ------> |   Queries      |
+|  GET /buses    |            |  BusController |           |  Create, Read, |           |   Bus DB       |
+|  POST /buses   |            |                |           |  Update, Delete|           |   Queries      |
+|  GET /routes   |            |  RouteController|          |  RouteService  |           |   Route DB     |
+|  POST /routes  |            |                |           |                |           |   Queries      |
+|  GET /schedules|            |  ScheduleController|        |  ScheduleService|         |   Schedule DB  |
+|  POST /schedules|           |                |           |                |           |   Queries      |
+|  GET /bookings |            |  BookingController|        |  BookingService|           |   Booking DB   |
+|  POST /bookings|            |                |           |                |           |   Queries      |
+|  GET /payments |            |  PaymentController|        |  PaymentService|           |   Payment DB   |
+|  POST /payments|            |                |           |                |           |   Queries      |
++----------------+            +----------------+           +----------------+           +----------------+
+
+
+
++----------------+      +-----------------+       +-------------------+
+|   User         |      |  API Layer      |       |   Services        |
++----------------+      +-----------------+       +-------------------+
+|                |      |                 |       |                   |
+|  Register/Login| ---> | Authentication  | ----> |  UserService      |
+|  View Schedules| ---> | ScheduleController | ---> |  ScheduleService  |
+|  Make Booking  | ---> | BookingController | ---> |  BookingService   |
+|  Make Payment  | ---> | PaymentController | ---> |  PaymentService   |
+|  View Bookings | ---> | BookingController | ---> |  BookingService   |
++----------------+      +-----------------+       +-------------------+
+
+
++----------------+      +-----------------+       +-------------------+
+|   Admin        |      |  API Layer      |       |   Services        |
++----------------+      +-----------------+       +-------------------+
+|                |      |                 |       |                   |
+|  Manage Users  | ---> | AdminController | ----> |  UserService      |
+|  View Reports  | ---> | ReportingController | ---> |  ReportingService |
++----------------+      +-----------------+       +-------------------+
+
+
+
++-------------------+        +-------------------+
+|   Regular User    |        |       Admin       |
++-------------------+        +-------------------+
+        |                           |
+        |                           |
+        v                           v
++-------------------+        +-------------------+
+|  Register/Login   |        |  Manage Users     |
+|  View Schedules   |        |  View Reports     |
+|  Make Booking     |        +-------------------+
+|  Make Payment     |
+|  View Bookings    |
++-------------------+

@@ -1,0 +1,67 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.md
+
+# Environment files
+.env
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+jspm_packages/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-project
+*.sublime-workspace
+
+# Package distribution
+*.tgz
+
+# Debugger configurations
+*.launch
+*.code-workspace
+
+# Other files
+*.DS_Store
+*.pem
+*.p12
+*.key
+*.crt
+*.db
+*.sqlite
+*.sqlite3
+
+# Coverage directory used by testing tools
+coverage/
+
+# Documentation
+*.pdf
+*.docx
+
+# Optional npm cache directory
+.npm
+
+# Optional yarn cache directory
+.yarn/cache/
+
+# Local npm 
